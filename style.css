@@ -1,0 +1,331 @@
+```css
+/* ========================= */
+/* GOOGLE FONTS */
+/* ========================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#000;
+color:#fff;
+overflow-x:hidden;
+}
+
+/* ========================= */
+/* VIDEO BACKGROUND */
+/* ========================= */
+
+#bg-video{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+object-fit:cover;
+z-index:-2;
+}
+
+body::before{
+content:"";
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.55);
+z-index:-1;
+}
+
+/* ========================= */
+/* NAVBAR */
+/* ========================= */
+
+.navbar{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:20px 60px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(12px);
+z-index:1000;
+}
+
+.logo{
+font-size:28px;
+font-weight:600;
+}
+
+.nav-links{
+display:flex;
+list-style:none;
+gap:30px;
+}
+
+.nav-links a{
+text-decoration:none;
+color:white;
+font-weight:500;
+transition:0.3s;
+}
+
+.nav-links a:hover{
+color:#ffd6e7;
+}
+
+/* ========================= */
+/* HERO SECTION */
+/* ========================= */
+
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.hero-content{
+max-width:900px;
+}
+
+.top-text{
+letter-spacing:5px;
+font-size:14px;
+margin-bottom:20px;
+}
+
+.hero-title{
+font-family:'Great Vibes',cursive;
+font-size:110px;
+line-height:1.1;
+}
+
+.hero-subtitle{
+font-size:24px;
+margin-top:20px;
+line-height:1.8;
+}
+
+.explore-btn{
+display:inline-block;
+margin-top:35px;
+padding:15px 45px;
+border:2px solid white;
+border-radius:50px;
+text-decoration:none;
+color:white;
+transition:0.3s;
+}
+
+.explore-btn:hover{
+background:white;
+color:black;
+}
+
+/* ========================= */
+/* GENERAL */
+/* ========================= */
+
+section{
+padding:100px 8%;
+}
+
+h2{
+text-align:center;
+font-size:55px;
+margin-bottom:50px;
+font-family:'Great Vibes',cursive;
+}
+
+/* ========================= */
+/* GLASS CARD */
+/* ========================= */
+
+.card{
+max-width:900px;
+margin:20px auto;
+padding:25px;
+border-radius:20px;
+background:rgba(255,255,255,0.10);
+backdrop-filter:blur(15px);
+line-height:1.8;
+font-size:18px;
+}
+
+/* ========================= */
+/* OUR JOURNEY */
+/* ========================= */
+
+.journey-section{
+padding:100px 8%;
+}
+
+.journey-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+.journey-card{
+background:rgba(255,255,255,0.10);
+backdrop-filter:blur(15px);
+padding:20px;
+border-radius:25px;
+transition:0.4s;
+overflow:hidden;
+display:flex;
+flex-direction:column;
+align-items:center;
+}
+
+.journey-card:hover{
+transform:translateY(-10px);
+}
+.journey-card img,
+.journey-card video{
+width:100%;
+aspect-ratio:1260 / 2226;
+height:auto;
+object-fit:contain;
+border-radius:20px;
+background:#111;
+display:block;
+}
+.journey-card h3{
+margin-top:15px;
+font-size:18px;
+line-height:1.6;
+}
+
+.final-card{
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+min-height:320px;
+text-align:center;
+}
+
+.final-card h2{
+font-size:45px;
+margin-bottom:15px;
+}
+
+.final-card p{
+font-size:18px;
+line-height:1.8;
+}
+
+/* ========================= */
+/* GALLERY */
+/* ========================= */
+
+.gallery-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.gallery-grid img{
+width:100%;
+aspect-ratio:1260 / 2226;
+height:auto;
+object-fit:contain;
+border-radius:20px;
+background:#111;
+transition:0.4s;
+display:block;
+}
+
+.gallery-grid img:hover{
+transform:scale(1.05);
+}
+
+/* ========================= */
+/* VIDEO SECTION */
+/* ========================= */
+
+.video-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:25px;
+}
+
+.video-card{
+background:rgba(255,255,255,0.10);
+padding:20px;
+border-radius:20px;
+backdrop-filter:blur(15px);
+}
+
+.video-card video{
+width:100%;
+border-radius:15px;
+}
+
+/* ========================= */
+/* SCROLLBAR */
+/* ========================= */
+
+::-webkit-scrollbar{
+width:8px;
+}
+
+::-webkit-scrollbar-thumb{
+background:#ffb6c1;
+border-radius:10px;
+}
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
+@media(max-width:768px){
+
+.navbar{
+padding:15px 20px;
+flex-direction:column;
+gap:10px;
+}
+
+.nav-links{
+gap:12px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.hero-title{
+font-size:65px;
+}
+
+.hero-subtitle{
+font-size:18px;
+}
+
+h2{
+font-size:40px;
+}
+
+.journey-card img,
+.journey-card video{
+height:auto;
+}
+
+.gallery-grid img{
+height:auto;
+}
