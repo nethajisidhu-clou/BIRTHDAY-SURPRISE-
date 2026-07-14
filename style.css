@@ -176,7 +176,7 @@ display:flex;
 justify-content:center;
 align-items:center;
 text-align:center;
-padding:20px;
+padding:120px 20px 20px;
 }
 
 .hero-content{
@@ -190,9 +190,15 @@ margin-bottom:20px;
 }
 
 .hero-title{
+
 font-family:'Great Vibes',cursive;
-font-size:110px;
-line-height:1.1;
+
+font-size:95px;
+
+line-height:1.15;
+
+text-shadow:0 5px 30px rgba(255,255,255,.25);
+
 }
 
 .hero-subtitle{
@@ -204,17 +210,23 @@ line-height:1.8;
 .explore-btn{
 display:inline-block;
 margin-top:35px;
-padding:15px 45px;
-border:2px solid white;
+padding:16px 45px;
+background:rgba(255,255,255,0.08);
+border:1px solid rgba(255,255,255,0.25);
 border-radius:50px;
+color:#fff;
 text-decoration:none;
-color:white;
-transition:0.3s;
+backdrop-filter:blur(12px);
+-webkit-backdrop-filter:blur(12px);
+transition:all 0.35s ease;
 }
 
 .explore-btn:hover{
-background:white;
-color:black;
+background:#ff6b9d;
+border-color:#ff6b9d;
+color:#fff;
+transform:translateY(-4px);
+box-shadow:0 10px 25px rgba(255,107,157,0.4);
 }
 
 /* ========================= */
@@ -273,7 +285,11 @@ align-items:center;
 }
 
 .journey-card:hover{
-transform:translateY(-10px);
+
+transform:translateY(-10px) scale(1.03);
+
+box-shadow:0 20px 45px rgba(255,182,193,.25);
+
 }
 .journey-card img,
 .journey-card video{
@@ -330,11 +346,13 @@ background:#111;
 transition:0.4s;
 display:block;
 }
-
 .gallery-grid img:hover{
-transform:scale(1.05);
-}
 
+transform:scale(1.05);
+
+box-shadow:0 20px 45px rgba(255,182,193,.35);
+
+}
 /* ========================= */
 /* VIDEO SECTION */
 /* ========================= */
