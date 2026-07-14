@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Private Access ❤️</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#ff758c,#ff7eb3,#6a11cb);
+overflow:hidden;
+}
+
+body::before{
+content:"❤️ ❤️ ❤️ ❤️ ❤️ ❤️ ❤️ ❤️";
+position:absolute;
+font-size:35px;
+animation:float 12s linear infinite;
+opacity:.25;
+white-space:nowrap;
+width:200%;
+}
+
+@keyframes float{
+0%{
+transform:translateX(-100%) translateY(50px);
+}
+100%{
+transform:translateX(100%) translateY(-50px);
+}
+}
+
+.card{
+
+width:360px;
+padding:35px;
+background:rgba(255,255,255,.15);
+backdrop-filter:blur(18px);
+border-radius:20px;
+text-align:center;
+color:white;
+box-shadow:0 0 30px rgba(0,0,0,.3);
+
+}
+
+h1{
+
+margin-bottom:15px;
+font-size:32px;
+
+}
+
+p{
+
+margin-bottom:20px;
+opacity:.9;
+
+}
+
+input{
+
+width:100%;
+padding:14px;
+border:none;
+border-radius:10px;
+outline:none;
+font-size:16px;
+
+}
+
+button{
+
+margin-top:18px;
+width:100%;
+padding:14px;
+border:none;
+border-radius:10px;
+font-size:17px;
+cursor:pointer;
+background:white;
+color:#ff2f6d;
+font-weight:bold;
+transition:.3s;
+
+}
+
+button:hover{
+
+transform:scale(1.05);
+
+}
+
+#error{
+
+margin-top:15px;
+color:yellow;
+font-size:15px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>❤️ Welcome ❤️</h1>
+
+<p>This surprise is only for one special person.</p>
+
+<input
+type="password"
+id="password"
+placeholder="Enter Password">
+
+<button onclick="login()">
+
+Unlock Surprise 🎁
+
+</button>
+
+<p id="error"></p>
+
+</div>
+
+<script>
+
+const PASSWORD="Untill 11-11";
+
+if(sessionStorage.getItem("login")=="true"){
+
+window.location="home.html";
+
+}
+
+function login(){
+
+let pass=document.getElementById("password").value;
+
+if(pass===PASSWORD){
+
+sessionStorage.setItem("login","true");
+
+document.body.style.opacity="0";
+
+setTimeout(()=>{
+
+window.location="home.html";
+
+},800);
+
+}else{
+
+document.getElementById("error").innerHTML="❌ Wrong Password";
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
